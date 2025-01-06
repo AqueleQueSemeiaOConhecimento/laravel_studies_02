@@ -2,6 +2,7 @@
 
 @section('content')
 
-<p class="display-1 text-center">Hello world</p>
+{{-- comentario no blade --}}
+<p class="display-1 text-center">{{ $name }}</p>
 
 @endsection
