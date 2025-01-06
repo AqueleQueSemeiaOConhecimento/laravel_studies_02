@@ -2,24 +2,31 @@
 
 @section('content')
 
-{{-- empty => ver se a variavel esta vazia, se é 0, se é nulo --}}
-@empty($value)
-    <p>Não existe</p>
-@else
-    <p>Existe</p>
-@endempty
+{{-- for --}}
+@for($index = 0; $index < 5; $index++)
+    <h1>{{ $index }}</h1>=
+@endfor
 
-{{-- isset => verifica se a variavel esta definida e não é null --}}
-@isset($value)
-    <p>Existe a variável</p>
-@else
-    <p>Não existe a variável</p>
-@endisset
+{{-- foreach --}}
+@foreach($cities as $city)
+    <h1>{{ $city }}</h1>
+@endforeach
 
-{{-- unless => a menos que --}}
+{{-- forelse --}}
+@forelse($names as $name)
+    <h1>{{ $name }}</h1>
+@empty
+    <p>Names está vazio</p>
+@endforelse
 
-@unless($value == 100)
-    <p>OK!!!!</p>
-@endunless
+{{-- while --}}
+@while($indice < 10)
+    <p>Indice => {{ $indice }}</p>
+
+    @php
+        $indice++;
+    @endphp
+
+@endwhile
 
 @endsection

@@ -9,9 +9,12 @@ class MainController extends Controller
 {
     public function showView(): View
     {
-        return view("home", [
-            // 'value' => random_int(1,5)
-            'value' => 100
-        ]);
+        $data = [
+            'value' => 100,
+            'cities' => ['New York', 'Los Angeles', 'Chicago'],
+            'names' => ['a', 'b', 'c'],
+            'indice' => 1
+        ];
+        return view("home", $data);
     }
 }
