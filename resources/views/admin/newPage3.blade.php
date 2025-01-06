@@ -2,6 +2,6 @@
 
 @section('content')
 
-<p class="display-1 text-center">Admin</p>
+<h1>{{ $name }} && {{ $phone }}</h1>
 
 @endsection
