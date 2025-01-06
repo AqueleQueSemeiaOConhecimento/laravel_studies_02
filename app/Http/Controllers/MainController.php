@@ -10,7 +10,7 @@ class MainController extends Controller
     public function showView(): View
     {
         return view("home", [
-            'value' => random_int(1,100)
+            'value' => random_int(1,5)
         ]);
     }
 }
